@@ -114,6 +114,7 @@ public class CommandManager {
         this.registerCommands(new Command_HARDSTYLER());
         this.registerCommands(new Command_DAMAGE());
         this.registerCommands(new Command_FAKEKILL());
+        this.registerCommands(new Command_FAKEJOIN());
 
 //        this.registerCommands(new Command_TNTPlacer()); //This commands was never registered. We added it to test it. Result of testing: The command is not working
     }

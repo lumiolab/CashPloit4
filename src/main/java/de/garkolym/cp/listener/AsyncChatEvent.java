@@ -3,7 +3,7 @@ package de.garkolym.cp.listener;
 import de.garkolym.cp.Start;
 import de.garkolym.cp.commands.CommandBase;
 import de.garkolym.cp.commands.impl.Command_COMMANDSPY;
-import net.md_5.bungee.api.ChatColor;
+import org.bukkit.ChatColor;
 import org.bukkit.Sound;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
