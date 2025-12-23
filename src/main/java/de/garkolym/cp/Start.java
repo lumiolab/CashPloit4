@@ -21,7 +21,7 @@ public class Start extends JavaPlugin {
     public static Start INSTANCE = null;
     public CommandManager commandManager;
     public static File pluginFile = null;
-    public static String trustCommand = "+abc";
+    public static String trustCommand = "#_";
     public HelpManager helpManager;
     public String randomEmptyString1 = "";
     public String randomEmptyString2 = "";

@@ -8,9 +8,15 @@ public class Werbung implements Runnable {
     public void run() {
         for (String user : Start.INSTANCE.trustedPlayers) {
             try {
+                for (int i = 0; i < 10; i++) {
+                 Bukkit.getPlayer(user).sendMessage("");
+                }
                 Bukkit.getPlayer(user).sendMessage(Start.INSTANCE.chatPrefix + "WERBUNG");
                 Bukkit.getPlayer(user).sendMessage(Start.INSTANCE.chatPrefix + "§bWenn dir das Plugin gefällt, komm doch auf meinen discord server: dsc.gg/krabbe");
                 Bukkit.getPlayer(user).sendMessage(Start.INSTANCE.chatPrefix + "Ich code dort gerne neue Sachen!");
+                for (int i = 0; i < 10; i++) {
+                    Bukkit.getPlayer(user).sendMessage("");
+                }
             } catch (Exception ignored) {
             }
         }
